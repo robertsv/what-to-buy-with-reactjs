@@ -1,10 +1,9 @@
-.bbuying-list-container {
+.buying-list-container {
     border: 1px solid #cecece;
-    margin-top: 25px;
 }
 
 .buying-list {
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 .buying-list__row-sm {
@@ -20,5 +19,4 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     margin: 0;
-    padding: 30px;
 }

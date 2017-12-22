@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 
+import '../css/style.css';
+
 class WhatToBuyApp extends React.Component {
 
     constructor(props) {
@@ -59,11 +61,6 @@ class WhatToBuyApp extends React.Component {
 
 class Buttons extends React.Component {
 
-    // TODO (RV): not needed ?
-    // constructor(props) {
-    //     super(props);
-    // }
-
     render() {
         return (
             <div className="row">
@@ -77,11 +74,6 @@ class Buttons extends React.Component {
 }
 
 class ItemList extends React.Component {
-
-    // TODO (RV): not needed ?
-    // constructor(props) {
-    //     super(props);
-    // }
 
     render() {
         var self = this;
@@ -115,10 +107,9 @@ class ItemList extends React.Component {
 
 class AddItemDialog extends React.Component {
 
-    // TODO (RV): not needed ?
-    // constructor(props) {
-    //     super(props);
-    // }
+    resetInputField(){
+        this.item.value = "";
+    }
 
     render() {
         return (
@@ -142,7 +133,7 @@ class AddItemDialog extends React.Component {
                             </form>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-primary" onClick={() => this.props.addItem(this.item.value)}>Add</button>
+                            <button type="button" className="btn btn-primary" onClick={() => {this.props.addItem(this.item.value); this.resetInputField();}}>Add</button>
                             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
