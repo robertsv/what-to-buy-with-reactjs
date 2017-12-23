@@ -1,0 +1,26 @@
+@import "../../node_modules/bootswatch/dist/spacelab/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootswatch/dist/spacelab/bootswatch";
+
+.buying-list-container {
+  border: 1px solid #cecece;
+}
+
+.buying-list {
+  margin-top: 10px;
+}
+
+.buying-list__row-sm {
+  width: 10%;
+}
+
+.buttons-section {
+  margin-top: 15px;
+}
+
+body {
+  background: lightgray;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+}

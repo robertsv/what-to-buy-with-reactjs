@@ -4,6 +4,9 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const extractSass = new ExtractTextPlugin({
+//     filename: "style.bundle.css"
+// });
 
 // Constant with our paths
 const paths = {
@@ -40,12 +43,12 @@ module.exports = {
             // CSS loader for CSS files
             // Files will get handled by css loader and then passed to the extract text plugin
             // which will write it to the file we defined above
-            {
-                test: /\.css$/,
-                loader: ExtractTextPlugin.extract({
-                    use: 'css-loader',
-                }),
-            },
+            // {
+            //     test: /\.css$/,
+            //     loader: ExtractTextPlugin.extract({
+            //         use: 'css-loader',
+            //     }),
+            // },
             // File loader for image assets -> ADDED IN THIS STEP
             // We'll add only image extensions, but you can things like svgs, fonts and videos
             {
@@ -53,6 +56,12 @@ module.exports = {
                 use: [
                     'file-loader',
                 ],
+            },
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract({
+                    use: ['css-loader', 'sass-loader']
+                }),
             },
         ],
     },
