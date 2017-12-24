@@ -992,8 +992,6 @@ var WhatToBuyApp = function (_React$Component) {
             this.setState({
                 items: itemsTmp
             });
-            console.debug("touchItem ...");
-            console.debug(this.state.items);
         }
     }, {
         key: 'removeItems',
@@ -1007,8 +1005,6 @@ var WhatToBuyApp = function (_React$Component) {
             this.setState({
                 items: itemsTmp
             });
-            console.debug("removeItems ...");
-            console.debug(this.state.items);
             localStorage.setItem('items', JSON.stringify(itemsTmp));
         }
     }, {
