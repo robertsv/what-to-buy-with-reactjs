@@ -1160,7 +1160,7 @@ var AddItemDialog = function (_React$Component4) {
                             _react2.default.createElement(
                                 'h5',
                                 { className: 'modal-title' },
-                                'Modal title'
+                                'Add an item'
                             ),
                             _react2.default.createElement(
                                 'button',
